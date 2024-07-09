@@ -43,8 +43,26 @@
   * lm: Language model training data and vocabulary for each language
   * train/test: Stores data for each language or training dataset, including the following files:
     * utt2spk: Information about which speaker uttered each sentence
+      * example (ID SPK):
+      ```terminal=
+        KHF0029-0047-0001-0000 KHF029
+        KHF0029-0047-0001-0001 KHF029
+        KHF0029-0047-0001-0002 KHF029
+      ```
     * text: The transcript of each sentence (the ground truth)
+      * example (ID TEXT):
+      ```terminal=
+        KHF0029-0047-0001-0000 it sòo-jī
+        KHF0029-0047-0001-0001 suà-lo̍h-lâi khuànn tâi-pak tshī bîn-á-tsài tsa̍p-tshit hō ê thinn-khì
+        KHF0029-0047-0001-0002 un-tōo jī-tsa̍p-tshit tsì sann-tsa̍p-jī tōo lo̍h-hōo ki-lu̍t tsa̍p
+      ```
     * wav.scp: The location data of each sentence (data path)
+      * example (ID WAV_PATH):
+      ```terminal=
+        KHF0029-0047-0001-0000 data/wav/2604.wav
+        KHF0029-0047-0001-0001 data/wav/2455.wav
+        KHF0029-0047-0001-0002 data/wav/471.wav
+      ```
   * wav: Stores soft links to the audio files of each corpus, see Instructions for details
 - local folder: Stores auxiliary scripts, with detailed documentation
 - log folder: Stores logs of each execution, automatically generated during each run
